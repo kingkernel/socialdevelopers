@@ -1,4 +1,19 @@
+<?php
+$template = [
+    1=> 'cerulean',
+    2=> 'spacelab',
+    3=> 'cyborg',
+    4=> 'darkly',
+    5=> 'quartz',
+    6=> 'sketchy',
+    7=> 'superhero',
+    8=> 'vapor'
+];
+?>
 @extends("bootstrap.model")
+@section("headmain")
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.0.1/{{$template[rand(1, 8)]}}/bootstrap.min.css" />
+@endsection
 @section("bodymain")
 
 <header>
