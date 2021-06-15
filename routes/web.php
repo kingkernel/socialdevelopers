@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('bootstrap.index');
 });
+
+Route::get('user/new', function () {
+    return view('bootstrap.input_newuser');
+});

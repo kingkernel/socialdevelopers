@@ -1,7 +1,7 @@
 <?php
 $template = [
     1=> 'cerulean',
-    2=> 'spacelab',
+    2=> 'spacelabb',
     3=> 'cyborg',
     4=> 'darkly',
     5=> 'quartz',
