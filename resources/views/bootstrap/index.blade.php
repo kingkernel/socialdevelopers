@@ -135,16 +135,16 @@ $template = [
   
   </style>
 
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Social Developers</a>
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark" style="padding: 10px">
+  <a class="navbar-brand" href="#"><span class="fa fa-code"></span> Social Developers</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/ ">
           <i class="fa fa-home"></i>
           Home
           <span class="sr-only">(current)</span>
@@ -152,18 +152,18 @@ $template = [
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fa fa-envelope-o">
+          <i class="fa fa-users">
             <span class="badge badge-danger">11</span>
           </i>
-          Link
+          Membros
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">
-          <i class="fa fa-envelope-o">
+          <i class="fa fa-comments">
             <span class="badge badge-warning">11</span>
           </i>
-          Disabled
+          Discursões
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -184,10 +184,10 @@ $template = [
     <ul class="navbar-nav ">
       <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fa fa-bell">
+          <i class="fa fa-book">
             <span class="badge badge-info">11</span>
           </i>
-          Test
+          E-books
         </a>
       </li>
       <li class="nav-item">
@@ -199,6 +199,18 @@ $template = [
         </a>
       </li>
     </ul>
+  </div>
+  <div class="text-end">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Caminhos disponíveis
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Participar</a></li>
+        <li><a class="dropdown-item" href="#">Conhecer</a></li>
+        <li><a class="dropdown-item" href="#">Entrar</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
