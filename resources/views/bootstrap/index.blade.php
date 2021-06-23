@@ -206,7 +206,7 @@ $template = [
         Caminhos disponíveis
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Participar</a></li>
+        <li><a class="dropdown-item" href="user/new/">Participar</a></li>
         <li><a class="dropdown-item" href="#">Conhecer</a></li>
         <li><a class="dropdown-item" href="#">Entrar</a></li>
       </ul>
