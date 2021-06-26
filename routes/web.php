@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
+use App\Http\Controllers\inputController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    
     return view('bootstrap.index');
 });
 
 Route::get('user/new', function () {
     return view('bootstrap.input_newuser');
+});
+
+Route::post('newuserinput/', function (Request $Request) {
+   return inputController::newuserinput($Request);
 });

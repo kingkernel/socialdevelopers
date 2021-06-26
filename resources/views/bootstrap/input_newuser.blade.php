@@ -41,27 +41,28 @@ $meses = [
         </div>
       </div>
       <div class="col">
-        <form>
+        <form action="/newuserinput/" method="POST">
+          @csrf
           <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Email :</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="staticEmail">
+              <input type="email" class="form-control" name="email">
             </div>
           </div>
           <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-2 col-form-label">Password :</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword">
+              <input type="password" class="form-control" name="passkey">
             </div>
           </div>
           <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-2 col-form-label">Nome :</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" id="inputPassword">
+              <input type="text" class="form-control" name="name">
             </div>
             <label for="inputPassword" class="col-sm-2 col-form-label">Sobrenome :</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="inputPassword">
+              <input type="text" class="form-control" name="fullname">
             </div>
           </div>
           <div class="mb-2 row">
@@ -93,6 +94,12 @@ $meses = [
                   @endfor
               </select>
               </div>
+          </div>
+          <div class="mb-2 row">
+            <div class="offset-md-2">
+              <input type="submit" value="Cadastrar" class="btn btn-primary">
+            </div>
+            </div>
           </div>
         </form>
       </div>

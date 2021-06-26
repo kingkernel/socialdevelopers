@@ -9,6 +9,8 @@ $template = [
     7=> 'superhero',
     8=> 'vapor'
 ];
+$membros = new App\models\User;
+$quant_membros = $membros->count();
 ?>
 @extends("bootstrap.model")
 @section("headmain")
@@ -153,7 +155,9 @@ $template = [
       <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fa fa-users">
-            <span class="badge badge-danger">11</span>
+            <span class="badge badge-danger">
+              {{$quant_membros}}
+            </span>
           </i>
           Membros
         </a>
