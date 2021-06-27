@@ -9,7 +9,7 @@ $template = [
     7=> 'superhero',
     8=> 'vapor'
 ];
-$membros = new App\models\User;
+$membros = new App\Models\User;
 $quant_membros = $membros->count();
 ?>
 @extends("bootstrap.model")

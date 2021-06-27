@@ -41,7 +41,7 @@ $meses = [
         </div>
       </div>
       <div class="col">
-        <form action="/newuserinput/" method="POST">
+        <form action="http://{{$_SERVER["HTTP_HOST"]}}/newuserinput" method="POST">
           @csrf
           <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Email :</label>

@@ -14,9 +14,9 @@ class inputController extends Controller
         $user->email = $_POST["email"];
         $user->nome = $_POST["name"];
         $user->sobrenome = $_POST["fullname"];
-        $user->keypass = thisSystem::makePassword($_POST["passkey"]);
+        $user->keypass = thisSystem::makePassword($_REQUEST["passkey"]);
         $user->nasc = $_POST["ano_c"].'-'.$_POST["mes_c"].'-'.$_POST["dia_c"];
         $user->save();
-        return redirect("/");
+        //return ["fechou!"];
     }
 }

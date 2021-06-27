@@ -15,15 +15,13 @@ use App\Http\Controllers\inputController;
 |
 */
 
-Route::get('/', function () {
-    
+Route::get('/', function () { 
     return view('bootstrap.index');
 });
-
 Route::get('user/new', function () {
     return view('bootstrap.input_newuser');
 });
-
-Route::post('newuserinput/', function (Request $Request) {
-   return inputController::newuserinput($Request);
+Route::post('newuserinput/', function () {
+    inputController::newuserinput();
+    return redirect("/");
 });
