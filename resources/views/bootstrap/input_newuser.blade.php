@@ -46,23 +46,23 @@ $meses = [
           <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Email :</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" name="email">
+              <input type="email" class="form-control" name="email" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-2 col-form-label">Password :</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" name="passkey">
+              <input type="password" class="form-control" name="passkey" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-2 col-form-label">Nome :</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="name">
+              <input type="text" class="form-control" name="name" required>
             </div>
             <label for="inputPassword" class="col-sm-2 col-form-label">Sobrenome :</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" name="fullname">
+              <input type="text" class="form-control" name="fullname" required>
             </div>
           </div>
           <div class="mb-2 row">

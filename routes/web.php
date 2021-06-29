@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\inputController;
+use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,4 @@ Route::post('newuserinput/', function () {
     inputController::newuserinput();
     return redirect("/");
 });
+Route::post("auth/login", [authenticationController::class, 'checklogin']);

@@ -212,7 +212,7 @@ $quant_membros = $membros->count();
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" href="user/new/">Participar</a></li>
         <li><a class="dropdown-item" href="#">Conhecer</a></li>
-        <li><a class="dropdown-item" href="#">Entrar</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Entrar</a></li>
       </ul>
     </div>
   </div>
@@ -227,5 +227,37 @@ $quant_membros = $membros->count();
   </div>
   <div class="product-device shadow-sm d-none d-md-block"></div>
   <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-code"></span> Social developers <span class="fa fa-code"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="http://{{$_SERVER["HTTP_HOST"]}}/auth/login" method="POST">
+        @csrf
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">E-mail</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="email">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="keypass">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      </div>
+    </div>
+  </div>
 </div>
   @endsection

@@ -21,6 +21,7 @@ class CreateUsuariosTable extends Migration
             $table->string("nasc");
             $table->string("keypass");
             $table->string("type_user")->default("member");
+            $table->boolean("active")->default(false)->nullable();
             $table->timestamps();
         });
     }

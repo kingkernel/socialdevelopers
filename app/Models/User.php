@@ -44,4 +44,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public static function login($email, $keypass)
+    {
+        $exists = json_decode(json_encode(\DB::table("usuarios")->select(
+            \DB::RAW("count(*) as existe"))->where(
+                ["email"=> $email,
+                "keypass"=>$keypass,
+                "active"=>true])->get()->toArray()), JSON_UNESCAPED_SLASHES);
+        return $exists[0];
+    }
 }
