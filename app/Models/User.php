@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Helpers\thisSystem;
 
 class User extends Authenticatable
 {
@@ -49,7 +50,7 @@ class User extends Authenticatable
         $exists = json_decode(json_encode(\DB::table("usuarios")->select(
             \DB::RAW("count(*) as existe"))->where(
                 ["email"=> $email,
-                "keypass"=>$keypass,
+                "keypass"=>thisSystem::makePassword($keypass),
                 "active"=>true])->get()->toArray()), JSON_UNESCAPED_SLASHES);
         return $exists[0];
     }
