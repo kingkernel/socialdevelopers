@@ -10,6 +10,7 @@ class authenticationController extends Controller
     public function checklogin()
     {
         $login = User::login($_POST["email"], $_POST["keypass"]);
+        print_r($login);
         if ($login["existe"]==1){
             echo "pode logar";
         } else {

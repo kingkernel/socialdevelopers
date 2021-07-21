@@ -1,4 +1,5 @@
 <?php
+
 $meses = [
     1=>"Janeiro",
     2=>"Fevereiro",
@@ -13,8 +14,15 @@ $meses = [
     11=>"Novembro",
     12=>"Dezembro"
 ];
+if (isset($erro)){
+  print_r($erro);
+}
 ?>
 @extends("bootstrap.model")
+@section("headmain")
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" ></script>
+@endsection
 @section("bodymain")
 <div class="container">
   <div class="container px-4 py-5" id="custom-cards">
@@ -99,6 +107,13 @@ $meses = [
             <div class="offset-md-2">
               <input type="submit" value="Cadastrar" class="btn btn-primary">
             </div>
+            
+            <div class="alert alert-warning d-flex align-items-center" role="alert">
+              <div>
+                Parece que o email
+              </div>
+            </div>
+            
             </div>
           </div>
         </form>
