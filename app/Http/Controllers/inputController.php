@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmNewUserMail;
 use App\Models\User;
 use App\Helpers\thisSystem;
@@ -22,23 +23,26 @@ class inputController extends Controller
             $user->save();
             Mail::to($user->email)->send(new ConfirmNewUserMail());
         } catch (\Throwable $th) {
+            //print_r($th);
+            /*
             switch ($th->errorInfo) {
                 case '1062':
                    return Route::get("/user/new");
                     break;
-                /*
+                
                 default:
                     echo "alguma coisa";
                     break;
                 */
+                exit;
             }
-            $th->errorInfo;
+            //$th->errorInfo;
             /*
             [0] => 23000
             [1] => 1062
             [2] => Duplicate entry 'daniel.santos.ap@gmail.com' for key 'usuarios_email_unique'
             */
-        };
+        //};
 
         //return ["fechou!"];
     }
